@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd" updateCheck="true">
+    <diskStore path="java.io.tmpdir" />
+
+    <defaultCache eternal="false" maxElementsInMemory="1000"
+                  overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
+                  timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="FunctionCache" eternal="false"
+           maxElementsInMemory="500" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+
+    <cache name="RoleFunctionCache" eternal="false"
+           maxElementsInMemory="500" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+
+    <cache name="ModelDefCache" eternal="false"
+           maxElementsInMemory="500" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+
+    <cache name="SysNoConfigCache" eternal="false"
+           maxElementsInMemory="500" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+
+    <cache name="MesProdTimeCache" eternal="false"
+           maxElementsInMemory="500" overflowToDisk="false" diskPersistent="false"
+           timeToIdleSeconds="3600" timeToLiveSeconds="3600"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+</ehcache>
