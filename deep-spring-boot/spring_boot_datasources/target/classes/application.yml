@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    master:
+      url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+    cluster:
+      - key: slave1
+        url: jdbc:mysql://localhost:3306/test1?serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+      - key: slave2
+        password: 123456
+        url: jdbc:mysql://193.112.100.103:3306/test2?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+server:
+  port: 9091
+logging:
+  level:
+    com:
+      wds:
+        datasources:
+          mapper: debug
+
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location:  classpath:/mybatis/config/mybatis-config.xml
