@@ -1,0 +1,12 @@
+server:
+  port: 9001
+
+spring:
+  aop:
+    auto: true      # 只要引入了AOP依赖后，默认已经增加了@EnableAspectJAutoProxy。
+    proxy-target-class: false
+  data:
+    mongodb:
+      host: 10.201.17.154
+      port: 27017
+      database: logs
