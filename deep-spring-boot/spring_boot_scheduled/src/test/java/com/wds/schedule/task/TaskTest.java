@@ -18,6 +18,15 @@ public class TaskTest {
     private Task task;
 
     @Test
+    public void test1() throws Exception {
+        task.doTaskOne();
+        task.doTaskTwo();
+        task.doTaskThree();
+
+        Thread.currentThread().join();
+    }
+
+    @Test
     public void test() throws Exception {
         long start = System.currentTimeMillis();
 
