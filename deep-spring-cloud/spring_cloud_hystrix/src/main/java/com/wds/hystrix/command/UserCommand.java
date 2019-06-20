@@ -18,7 +18,6 @@ public class UserCommand extends HystrixCommand<User> {
 
     private static final HystrixCommandKey GETTER_KEY =  HystrixCommandKey.Factory.asKey("CommandKey");
 
-    @Autowired
     private RestTemplate restTemplate;
 
     private Long id;

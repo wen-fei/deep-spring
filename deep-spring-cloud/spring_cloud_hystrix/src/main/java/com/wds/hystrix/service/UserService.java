@@ -21,7 +21,6 @@ import java.util.concurrent.Future;
 public class UserService {
 
 
-    @Autowired
     private RestTemplate restTemplate;
 
     /**
