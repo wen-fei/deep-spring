@@ -1,0 +1,16 @@
+server:
+  port: 8989
+spring:
+  application:
+    name: turbine
+management:
+  server:
+    port: 8990
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka/
+turbine:
+  app-config: RIBBON-CONSUMER  # 指定需要手机监控信息的服务名
+  cluster-name-expression: "default"  # 指定集群名称
+  combine-host-port: true  # 使用主机名+端口号的组合来区分服务，默认只用host
