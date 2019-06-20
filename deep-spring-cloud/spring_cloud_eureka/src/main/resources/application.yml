@@ -1,11 +1,15 @@
 server:
-  port: 9001
-
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+  profiles:
+    active: eureka1
 eureka:
   instance:
-    hostname: localhost
+    hostname: eureka1
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      default-zone: http://eureka2:8762/eureka/
