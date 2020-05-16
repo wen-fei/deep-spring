@@ -12,15 +12,15 @@ public class Address {
     private String city;
     private String state;
     private String zipCode;
-    private String conuntry;
+    private String country;
 
-    public Address(String line1, String line2, String city, String state, String zipCode, String conuntry) {
+    public Address(String line1, String line2, String city, String state, String zipCode, String country) {
         this.line1 = line1;
         this.line2 = line2;
         this.city = city;
         this.state = state;
         this.zipCode = zipCode;
-        this.conuntry = conuntry;
+        this.country = country;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Address {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zipCode='" + zipCode + '\'' +
-                ", conuntry='" + conuntry + '\'' +
+                ", country='" + country + '\'' +
                 '}';
     }
 }
