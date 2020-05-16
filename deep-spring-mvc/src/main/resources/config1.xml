@@ -8,4 +8,8 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean name="product" class="org.wds.beans.Product"/>
 
     <bean id="localDate" class="java.time.LocalDate" factory-method="now"/>
+
+    <!--对象销毁前执行某个方法-->
+    <bean id="executorService" class="java.util.concurrent.Executors"
+          factory-method="newCachedThreadPool" destroy-method="shutdown"/>
 </beans>
