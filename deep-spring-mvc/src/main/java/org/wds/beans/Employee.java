@@ -9,9 +9,9 @@ public class Employee {
 
     private String firstName;
     private String lastName;
-    private String homeAddress;
+    private Address homeAddress;
 
-    public Employee(String firstName, String lastName, String homeAddress) {
+    public Employee(String firstName, String lastName, Address homeAddress) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.homeAddress = homeAddress;
@@ -36,11 +36,11 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public String getHomeAddress() {
+    public Address getHomeAddress() {
         return homeAddress;
     }
 
-    public void setHomeAddress(String homeAddress) {
+    public void setHomeAddress(Address homeAddress) {
         this.homeAddress = homeAddress;
     }
 }
