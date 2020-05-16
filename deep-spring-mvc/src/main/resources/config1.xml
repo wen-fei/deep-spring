@@ -12,4 +12,11 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--对象销毁前执行某个方法-->
     <bean id="executorService" class="java.util.concurrent.Executors"
           factory-method="newCachedThreadPool" destroy-method="shutdown"/>
+
+    <!-- pass arg-value by arg-name-->
+    <bean name="featuredProduct" class="org.wds.beans.Product">
+        <constructor-arg name="name" value="Ultimate Olive Oil" />
+        <constructor-arg name="description" value="The purest olive oil on the market" />
+        <constructor-arg name="price" value="9.95" />
+    </bean>
 </beans>
