@@ -1,6 +1,7 @@
 package org.wds.beans;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * @author : TenYun
@@ -11,12 +12,12 @@ public class Product  implements Serializable {
     private static final long serialVersionUID = 748392348L;
     private String name;
     private String description;
-    private float price;
+    private BigDecimal price;
 
     public Product() {
     }
 
-    public Product(String name, String description, float price) {
+    public Product(String name, String description, BigDecimal price) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -38,11 +39,11 @@ public class Product  implements Serializable {
         this.description = description;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 }
