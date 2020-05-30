@@ -1,10 +1,14 @@
 package org.wds.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * @author : TenYun
  * @date : 2020-05-30 16:46
  * @description :
+ * 此注释表明，任何和此pojo无关的属性都忽略
  **/
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
 
     private String type;
