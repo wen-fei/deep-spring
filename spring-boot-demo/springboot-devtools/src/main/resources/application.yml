@@ -1,0 +1,5 @@
+
+spring:
+  devtools:
+    restart:
+      exclude: static/**,public/**  # 一些静态资源不需要触发restart
