@@ -1,0 +1,4 @@
+spring:
+  profiles: prod
+server:
+  port: 8091
