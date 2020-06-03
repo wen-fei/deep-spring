@@ -3,3 +3,7 @@ spring:
   devtools:
     restart:
       exclude: static/**,public/**  # 一些静态资源不需要触发restart
+      additional-paths:     # 监控不在classpath的目录文件
+      log-condition-evaluation-delta: false  # 禁用日志报告
+      enabled: false  # 禁用重启功能，如果要完全禁用，需要在入口文件main函数，调用run之前设置System.setProperty("spring.devtools.restart.enabled", "false");
+      trigger-file: .reloadtrigger   # 放在resource目录下的重启触发器文件，此时只有在更新.reloadtrigger文件时才触发重启
