@@ -1,4 +1,12 @@
 logging:
+  file:
+    name: spring.log
+    path: /log/
+    max-size: 100MB
+    max-history: 7
+  pattern:
+
+    level: user:%X{user} %5p
   group:
     # 自己定义日志组
     tomcat:
