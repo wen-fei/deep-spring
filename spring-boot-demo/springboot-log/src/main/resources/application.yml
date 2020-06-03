@@ -1,0 +1,10 @@
+logging:
+  group:
+    # 自己定义日志组
+    tomcat:
+      org.apache.catalina, org.apache.coyote, org.apache.tomcat
+  level:
+    root:
+      debug
+    tomcat:
+      TRACE
