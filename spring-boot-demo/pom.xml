@@ -5,6 +5,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-hello</module>
+        <module>springboot-RESTful</module>
+        <module>springboot-jpa</module>
+        <module>springboot-devtools</module>
+        <module>springboot-profile</module>
+        <module>springboot-log</module>
+        <module>springboot-internationalization</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,6 +32,7 @@
         <slf4j.version>1.7.22</slf4j.version>
     </properties>
     <dependencies>
+        <!-- web相关 核心依赖包，包括RESTful、使用SpringMVC的应用程序。-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
