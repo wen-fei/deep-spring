@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @description :
  **/
 @Component
-@RabbitListener(queues = "hello")
+@RabbitListener(queues = "helloworld")
 public class Receiver {
 
     @RabbitHandler
